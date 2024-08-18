@@ -47,6 +47,13 @@ plt.ylim([0.8, 1])
 plt.legend(loc='lower right')
 plt.show()
 
+#making predictions using test images
+predictions = model.predict(test_images)
+
+
+import numpy as np
+print(f"Predicted label: {np.argmax(predictions[0])}")
+print(f"Actual label: {test_labels[0]}")
 
 
 
